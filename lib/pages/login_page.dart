@@ -80,6 +80,28 @@ class _LoginPageState extends State<LoginPage> {
       setState(() {
         passwordError = "Please fill in your password";
       });
+      SnackBar snackBar = const SnackBar(
+        content: Text("Password cannot be empty"),
+        duration: Duration(seconds: 1),
+      );
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      return;
+    }
+    else {
+      setState(() {
+        passwordError = null;
+      });
+    }
+
+    if(!((password.contains(RegExp(r'[a-z]')) || password.contains(RegExp(r'[A-Z]'))) && password.contains(RegExp(r'[0-9]')))) {
+      setState(() {
+        passwordError = "Password must be alphanumeric!";
+      });
+      SnackBar snackBar = const SnackBar(
+        content: Text("Password must be alphanumeric!"),
+        duration: Duration(seconds: 1),
+      );
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
       return;
     }
     else {

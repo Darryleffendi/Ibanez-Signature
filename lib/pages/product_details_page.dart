@@ -285,6 +285,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                           style: TextStyle(
                             fontFamily: 'Modica',
                             letterSpacing: 3,
+                            color: Colors.white,
                           ),
                         )
                       ),
@@ -294,6 +295,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                           style: TextStyle(
                             fontFamily: 'Modica',
                             letterSpacing: 3,
+                            color: Colors.white,
                           ),
                         ),
                       )
